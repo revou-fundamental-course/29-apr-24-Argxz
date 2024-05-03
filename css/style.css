@@ -1,0 +1,66 @@
+body{
+    margin: 0px;
+}
+.header{
+    display : flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(114, 226, 251);
+    height: 60px;
+}
+
+.header .logo{
+    margin-left : 20px;
+}
+.logo .tech{
+    height: 45px;
+}
+
+.header .nav-list ul {
+    padding-left: 0;
+    display: flex;
+    justify-content: center;
+    margin-right: 20px;
+    gap: 3px;
+    
+}
+.header .nav-list li {
+    list-style-type: none;
+}
+.header .nav-list li a {
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: rgb(0, 0, 0);
+    transition: all 0.2s ease-in-out;
+    background-color: white;
+}
+.header .nav-list li:hover a {
+    background-color: #033162;
+    color: white;
+}
+
+.content-container{
+    height: 682px;
+    background-image: url("../assets/store.png");
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.content-container .wrapper{
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 25px;
+}
+.content-container .wrapper .button-start{
+    margin-bottom: 10px;
+}
