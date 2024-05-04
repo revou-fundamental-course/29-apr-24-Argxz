@@ -5,7 +5,7 @@ body{
     display : flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(114, 226, 251);
+    background-color: rgb(191, 186, 186);
     height: 60px;
 }
 
@@ -43,7 +43,7 @@ body{
     color: white;
 }
 
-.content-container{
+.wrap-container{
     height: 682px;
     background-image: url("../assets/store.png");
     background-size: cover;
@@ -51,7 +51,7 @@ body{
     flex-direction: column;
     justify-content: center;
 }
-.content-container .wrapper{
+.wrap-container .wrapper{
     color: rgb(255, 255, 255);
     background-color: rgba(0, 0, 0, 0.6);
     display: flex;
@@ -61,6 +61,109 @@ body{
     text-align: center;
     font-size: 25px;
 }
-.content-container .wrapper .button-start{
-    margin-bottom: 10px;
+
+.wrap-container .wrapper h1{
+    margin: 20px;
+}
+.wrap-container .wrapper h3{
+    margin: 10px;
+}
+.wrap-container .wrapper .button-start{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    border: none;
+    color: rgb(0, 0, 0);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 700;
+    border-radius:4px;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.wrap-container .wrapper .button-start:hover{
+    background-color: #033162;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 8px 16px 0 rgba(255, 255, 255, 0.24), 0 17px 50px 0 rgba(255, 255, 255, 0.19);
+}
+
+.wrap-container .wrapper .button-start a{
+    text-decoration: none;
+}
+
+.content-container{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.content-container .product{
+    border: black 1px solid;
+    height: 1000px;
+    width: 1000px;
+}
+
+.content-container .form{
+    background-color: rgb(191, 186, 186);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    width: 400px;
+    padding: 30px;
+}
+
+.content-container .form h2{
+    margin-top: 0px;
+    font-weight: bolder;
+    font-size: xx-large;
+}
+
+.content-container .form p{
+    margin-top: 0px;
+    margin-bottom: 60px;
+    font-size: large;
+}
+.content-container .form .field{
+    display: flex;
+    flex-direction: column;
+}
+.content-container .form .field .input-field{
+    margin-top: 5px;
+    padding: 10px;
+    border: black 1px solid;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+.content-container .form .field .input-label{
+    font-weight: bolder;
+    font-size: large;
+}
+
+.content-container .form .button-submit{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background-color: #033162;
+    border: none;
+    color: rgb(255, 255, 255);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 700;
+    border-radius:4px;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+.content-container .form .button-submit:hover{
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    box-shadow: 0 8px 16px 0 rgba(255, 255, 255, 0.24), 0 17px 50px 0 rgba(255, 255, 255, 0.19);
 }
