@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
     <title>Tech-Store</title>
 </head>
 <body>
@@ -13,9 +14,9 @@
         </div>
         <nav class="nav-list">
             <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">Our Package</a></li>
-                <li><a href="">Call Us</a></li>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="#package">Our Package</a></li>
+                <li><a href="#artikel">Call Us</a></li>
             </ul>
         </nav>
     </header>
@@ -23,13 +24,38 @@
         <div class="wrapper">
             <h1>TECH-STORE ID</h1>
             <h3>THE BEST TECHNOLOGY STORE IN TOWN</h3>
-            <button class="button-start"><a href="#konten"></a>GET STARTED</button>
+            <button onclick="location.href='#artikel'" class="button-start">GET STARTED!</button>
         </div>
     </article>
-    <article>
-        <section class="content-container" id="konten">
+    <article id="artikel">
+        <section class="content-container">
             <div class="product">
-
+                <section class="review">
+                    <img src="assets/printer.png" alt="slider-product">
+                    <div class="testimony">
+                        <h2>" Toko ini sangat lengkap dan terpercaya! "</h2>
+                        <div class="testimony-acc">
+                            <img src="assets/user.png" alt="profile" class="profile-img">
+                            <div class="acc-profile">
+                                <h3 style="margin-top: 10px;">Mark Zuckerberg</h3>
+                                <p style="margin-top: -15px;">CEO META, 35</p>
+                            </div>
+                        </div>
+                    </div>
+                    <section class="testi-under">
+                        <h2>
+                            Explore the ultimate tech experience with our bespoke computer store package. 
+                            Our seasoned specialists curate remarkable tech journeys, ensuring top-notch selections and effortless delivery. 
+                            From gaming havens to professional setups, our packages cater to every tech preference. 
+                            Take advantage of our expert guidance and comprehensive warranty for a hassle-free shopping adventure.
+                        </h2>
+                        <div class="benefits">
+                            <p>1. Explore a wide range of cutting-edge technologies to enhance your computing experience.</p>
+                            <p>2. Enjoy exclusive deals and discounts on premium computer hardware and accessories.</p>
+                            <p>3. Receive expert technical support and assistance to ensure seamless performance and troubleshooting.</p>
+                        </div>
+                    </section>
+                </section>
             </div>
             <div class="form">
                 <h2>Contact Us</h2>
@@ -57,6 +83,77 @@
                     <button type="submit" class="button-submit">SUBMIT</button>
                 </form>
             </div>
+        </section>
+    </article>
+    <article id="package">
+        <section class="package-container">
+            <section class="package-header">
+                <h1>OUR PACKAGE</h1>
+            </section>
+            <section class="product-list">
+                <div class="item-list">
+                    <div class="items">
+                        <img src="assets/electronic.png" alt="pc" />
+                        <div class="item-detail">
+                        <p class="item-title">PC</p>
+                        <p>
+                            An enticing destination providing diverse encounters, 
+                            from immersing in high-performance gaming to uncovering its vast array of software and hardware options.
+                        </p>
+                        </div>
+                    </div>
+                    <div class="items">
+                        <img src="assets/laptop.png" alt="pc" />
+                        <div class="item-detail">
+                        <p class="item-title">Laptop</p>
+                        <p>
+                            A captivating hub of possibilities, offering a myriad of experiences, from immersing in portable productivity to unveiling its sleek design and versatile functionality.
+                        </p>
+                        </div>
+                    </div>
+                    <div class="items">
+                        <img src="assets/handphone2.png" alt="pc" />
+                        <div class="item-detail">
+                        <p class="item-title">Handphone</p>
+                        <p>
+                            A captivating realm of connectivity, offering an array of experiences, from seamless communication to discovering its sleek design and innovative features, 
+                            all within the dynamic world of mobile technology.
+                        </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item-list">
+                    <div class="items">
+                        <img src="assets/electronic.png" alt="pc" />
+                        <div class="item-detail">
+                        <p class="item-title">PC</p>
+                        <p>
+                            An enticing destination providing diverse encounters, 
+                            from immersing in high-performance gaming to uncovering its vast array of software and hardware options.
+                        </p>
+                        </div>
+                    </div>
+                    <div class="items">
+                        <img src="assets/laptop.png" alt="pc" />
+                        <div class="item-detail">
+                        <p class="item-title">Laptop</p>
+                        <p>
+                            A captivating hub of possibilities, offering a myriad of experiences, from immersing in portable productivity to unveiling its sleek design and versatile functionality.
+                        </p>
+                        </div>
+                    </div>
+                    <div class="items">
+                        <img src="assets/handphone2.png" alt="pc" />
+                        <div class="item-detail">
+                        <p class="item-title">Handphone</p>
+                        <p>
+                            A captivating realm of connectivity, offering an array of experiences, from seamless communication to discovering its sleek design and innovative features, 
+                            all within the dynamic world of mobile technology.
+                        </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </section>
     </article>
 </body>
