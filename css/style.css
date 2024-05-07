@@ -9,23 +9,35 @@ body{
     justify-content: space-between;
     align-items: center;
     background-color: rgb(191, 186, 186);
-    height: 60px;
+    max-height: fit-content;
+    width: 100%;
+    position: fixed;
 }
 
 .header .logo{
     margin-left : 20px;
 }
 .logo .tech{
-    height: 45px;
+    height: 40px;
 }
 
+.header .nav-list{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.menu-icon{
+    display: none;
+}
 .header .nav-list ul {
     padding-left: 0;
     display: flex;
     justify-content: center;
     margin-right: 20px;
-    gap: 3px;
-    
+}
+.header .nav-list ul li {
+    margin-right: 3px;
 }
 .header .nav-list li {
     list-style-type: none;
@@ -47,7 +59,8 @@ body{
 }
 
 .wrap-container{
-    height: 682px;
+    margin-top: 0px;
+    height: 782px;
     background-image: url("../assets/store.png");
     background-size: cover;
     display: flex;
@@ -98,25 +111,33 @@ body{
     text-decoration: none;
 }
 
+
 .content-container{
     display: flex;
-    justify-content: space-between;
-    padding: 20px;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 15px;
 }
+
 
 .content-container .product{
     height: 1000px;
     width: 1000px;
-    padding: 5px;
+    padding: 3px;
+    display: flex;
+    flex-basis: 70%;
 }
 
 .content-container .product .review{
     display: flex;
+
     flex-direction: column;
     align-items: center;
 
 }
 .content-container .product .review img{
+    /* max-width: 900px; */
+    width: 100%;
     max-width: 900px;
     height: 500px;
     border-radius: 8px;
@@ -143,6 +164,7 @@ body{
     max-height: 60px;
     object-fit: cover;
 }
+
 
 .acc-profile{
     margin-left: 10px;
@@ -173,9 +195,12 @@ body{
     background-color: rgb(191, 186, 186);
     border-radius: 8px;
     display: flex;
+    flex-basis: 25%;
+    flex-grow: 0;
     flex-direction: column;
     height: fit-content;
-    width: 400px;
+    width: 100%;
+    max-width: 400px;
     padding: 30px;
 }
 
@@ -234,7 +259,8 @@ body{
     display: flex;
     flex-flow: column wrap;
     align-items: center;
-    height: 100vh;
+/* 
+    height: 100vh; */
 }
 
 .package-header{
@@ -242,8 +268,8 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    background-color: #444b58;
-    color: white;
+    background-color: rgb(191, 186, 186);
+    color: rgb(0, 0, 0);
     width: 100%;
     font-size: 30px;
     padding: 10px 0;
@@ -284,4 +310,45 @@ body{
 
 .item-detail{
     width: 220px;
+}
+
+.form .field h5{
+    margin-top: -10px;
+}
+#username,#email{
+    color: red;
+}
+
+
+@media only screen and (max-width: 942px){
+    .content-container{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-list{
+        flex-wrap: wrap;
+    }
+    .nav-list ul{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .nav-list ul.hidden{
+        display: none;
+    }
+
+    .menu-icon{
+        border: 2px solid;
+        border-radius: 4px;
+        background-color: white;
+        margin-right: 10px;
+        display: flex;
+        align-items: center;
+        font-size: 32px;
+        font-weight: bolder;
+    }
+
+    .product-list .item-list{
+        flex-direction: column;
+    }
 }

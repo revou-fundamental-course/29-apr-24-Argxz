@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/script.js"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
     <title>Tech-Store</title>
 </head>
 <body>
@@ -13,11 +14,15 @@
             <img src="assets/cpu.png" alt="Tech-Store Logo" class="tech">
         </div>
         <nav class="nav-list">
-            <ul>
+            
+            <ul id="menu-list" class="hidden">
                 <li><a href="/index.html">Home</a></li>
                 <li><a href="#package">Our Package</a></li>
                 <li><a href="#artikel">Call Us</a></li>
             </ul>
+            <div class="menu-icon" id="menu-icon">
+                <i class="ph ph-list"></i>
+            </div>
         </nav>
     </header>
     <article class="wrap-container">
@@ -27,11 +32,11 @@
             <button onclick="location.href='#artikel'" class="button-start">GET STARTED!</button>
         </div>
     </article>
-    <article id="artikel">
+    <article id="artikel" class="artikel">
         <section class="content-container">
             <div class="product">
                 <section class="review">
-                    <img src="assets/printer.png" alt="slider-product">
+                    <img src="assets/printer.png" id="slider"/>
                     <div class="testimony">
                         <h2>" Toko ini sangat lengkap dan terpercaya! "</h2>
                         <div class="testimony-acc">
@@ -63,15 +68,17 @@
                 <form>
                     <div class="field">
                         <label for="name" class="input-label"> Name :</label>
-                        <input type="text" id="name" class="input-field" placeholder="Your Name Here">
+                        <input type="text" id="name-input" class="input-field" placeholder="Your Name Here">
+                        <h5 id="username"></h5>
                     </div>
                     <div class="field">
                         <label for="email" class="input-label"> Email Address :</label>
-                        <input type="text" id="email" class="input-field" placeholder="example@gmail.com">
+                        <input type="text" id="email-input" class="input-field" placeholder="example@gmail.com">
+                        <h5 id="email"></h5>
                     </div>
                     <div class="field">
                         <label for="interest" class="input-label"> Select What Your Interest</label>
-                        <select name="interest" id="interest" class="input-field">
+                        <select name="interest" id="interest-input" class="input-field">
                             <option value="none" selected disabled>
                                 Select Option
                             </option>
@@ -79,8 +86,9 @@
                             <option value="opt2">Laptop</option>
                             <option value="opt3">Handphone</option>
                         </select>
+                        <h5 id="interest"></h5>
                     </div>
-                    <button type="submit" class="button-submit">SUBMIT</button>
+                    <button type="submit" class="button-submit" id="button">SUBMIT</button>
                 </form>
             </div>
         </section>
@@ -156,5 +164,6 @@
             </section>
         </section>
     </article>
+    <script src="js/script.js"></script>
 </body>
 </html>
