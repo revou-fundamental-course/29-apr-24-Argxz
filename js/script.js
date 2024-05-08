@@ -1,17 +1,33 @@
 const submitButton = document.getElementsByClassName("button-submit");
 const nameInput = document.getElementById("name-input");
 const emailInput =document.getElementById("email-input");
+const interestInput =document.getElementById("interest-input");
 const nameOutput =document.getElementById("username");
 const emailOutput =document.getElementById("email");
+const interestOutput =document.getElementById("interest");
+var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-
-submitButton[0].addEventListener("click",function(){
-    if (nameInput.value.length !=0 && emailInput.value.length !=0){
+submitButton[0].addEventListener("click", function() {
+    if (nameInput.value.length != 0 && emailInput.value.length != 0 && interestInput.value === '') {
         alert("Selamat Datang");
-    } else{
-        alert("Please fill out all fields!");  
+    } else {
+        if (nameInput.value.length != 0) {
+            nameOutput.innerHTML = ""; // Hilangkan output untuk nama jika sudah diisi
+        } else {
+            nameOutput.innerHTML = "Nama tidak boleh Kosong";
+        }
+        if (emailInput.value.length != 0 && emailPattern.test(emailInput.value)) {
+            emailOutput.innerHTML = ""; // Hilangkan output untuk email jika sudah diisi
+        } else {
+            emailOutput.innerHTML = "Email tidak boleh kosong dan harus valid";
+        }
+        if (interestInput.value === '') {
+            interestOutput.innerHTML = ""; // Hilangkan output untuk minat jika sudah dipilih
+        } else {
+            interestOutput.innerHTML = "Minimal pilih salah satu";
+        }
     }
-})
+});
 
 nameInput.addEventListener("input", function(){
     if (nameInput.value.length ===0){
@@ -24,8 +40,6 @@ emailInput.addEventListener("input",function(){
         emailOutput.textContent="Email tidak boleh kosong";
     }
 })
-
-
 
 const menuIcon = document.getElementById("menu-icon");
 const menuList = document.getElementById("menu-list");

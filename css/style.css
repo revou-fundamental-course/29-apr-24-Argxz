@@ -315,7 +315,7 @@ body{
 .form .field h5{
     margin-top: -10px;
 }
-#username,#email{
+#username,#email,#interest{
     color: red;
 }
 
